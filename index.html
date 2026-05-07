@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Sobolev</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="icon" href="assets/bingx-growth-poster.jpg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="src/styles.css?v=17"/>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="grain"></div>
+  <div id="vignette"></div>
+  <!-- SVG filters: luma-key black → alpha for video masks -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <filter id="black-to-alpha" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values="
+          1 0 0 0 0
+          0 1 0 0 0
+          0 0 1 0 0
+          0.65 0.7 0.95 0 -0.78"/>
+        <feComponentTransfer>
+          <feFuncA type="linear" slope="2.6" intercept="0"/>
+        </feComponentTransfer>
+      </filter>
+    </defs>
+  </svg>
+  <div id="root"></div>
+  <script src="dist/app.bundle.js?v=17"></script>
+</body>
+</html>
