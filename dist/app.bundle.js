@@ -786,19 +786,19 @@ window.ChapterSpine = ChapterSpine;
 const SOCIAL_LINKS = [{
   id: 'youtube',
   label: 'YouTube',
-  href: 'https://www.youtube.com/@sobaleu'
+  href: 'https://www.youtube.com/channel/UC0btvS_RZvsgJVkCywaSHyQ'
 }, {
   id: 'telegram',
   label: 'Telegram',
-  href: 'https://t.me/sobaleu'
+  href: 'https://t.me/joinchat/B2Hg1f7a3_40YTNi'
 }, {
   id: 'instagram',
   label: 'Instagram',
-  href: 'https://www.instagram.com/sobaleu/'
+  href: 'https://www.instagram.com/andrei_sobolev_/'
 }, {
   id: 'dm',
   label: 'DM',
-  href: 'https://t.me/sobaleu'
+  href: 'https://t.me/andreisobolev'
 }];
 function SocialIcon({
   id
@@ -976,7 +976,7 @@ function Hero() {
   }, /*#__PURE__*/React.createElement("a", {
     className: "btn primary",
     "data-magnetic": "0.25",
-    href: "https://t.me/sobolev_c1k",
+    href: "https://t.me/andreisobolev",
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/React.createElement("span", {
