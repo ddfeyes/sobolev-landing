@@ -662,15 +662,28 @@ section { position: relative; }
 #bingx .spinning-logo.video-logo.bingx-legacy::after {
   display: none;
 }
+#bingx .spinning-logo.video-logo.bingx-legacy {
+  inset: -8%;
+  overflow: hidden;
+  -webkit-mask-image: radial-gradient(ellipse 64% 52% at 50% 48%, black 0%, black 56%, rgba(0,0,0,.66) 76%, transparent 94%);
+          mask-image: radial-gradient(ellipse 64% 52% at 50% 48%, black 0%, black 56%, rgba(0,0,0,.66) 76%, transparent 94%);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+}
+#bingx .spinning-logo .spin-label {
+  display: none;
+}
 .spinning-logo.video-logo.bingx-legacy .logo-video {
   filter:
     url(#black-to-alpha)
-    contrast(1.05)
-    saturate(1.1)
-    brightness(1.02)
-    drop-shadow(0 0 40px var(--logo-glow, rgba(62,220,129,.22)));
-  -webkit-mask-image: radial-gradient(ellipse 58% 46% at 50% 50%, black 0%, black 57%, rgba(0,0,0,.58) 66%, transparent 83%);
-          mask-image: radial-gradient(ellipse 58% 46% at 50% 50%, black 0%, black 57%, rgba(0,0,0,.58) 66%, transparent 83%);
+    contrast(1.04)
+    saturate(.96)
+    brightness(.9)
+    drop-shadow(0 0 34px var(--logo-glow, rgba(62,220,129,.18)));
+  -webkit-mask-image: radial-gradient(ellipse 62% 50% at 50% 48%, black 0%, black 56%, rgba(0,0,0,.58) 76%, transparent 92%);
+          mask-image: radial-gradient(ellipse 62% 50% at 50% 48%, black 0%, black 56%, rgba(0,0,0,.58) 76%, transparent 92%);
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%;
@@ -716,23 +729,59 @@ section { position: relative; }
   position: relative;
   z-index: 1;
   filter:
-    saturate(1.03)
-    brightness(1.02)
-    drop-shadow(0 0 24px rgba(78,171,255,.26))
-    drop-shadow(0 30px 52px rgba(0,0,0,.38));
+    saturate(.9)
+    contrast(.98)
+    brightness(.76)
+    drop-shadow(0 0 18px rgba(78,171,255,.18))
+    drop-shadow(0 30px 52px rgba(0,0,0,.42));
+  -webkit-mask-image: radial-gradient(ellipse 82% 78% at 50% 48%, black 0%, black 62%, rgba(0,0,0,.72) 78%, transparent 98%);
+          mask-image: radial-gradient(ellipse 82% 78% at 50% 48%, black 0%, black 62%, rgba(0,0,0,.72) 78%, transparent 98%);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
 }
 .c1k-static-object .asset-reflect {
   display: none;
 }
 .c1k-static-image:hover .asset-base {
   filter:
-    saturate(1.05)
-    brightness(1.04)
-    drop-shadow(0 0 32px rgba(78,171,255,.34))
-    drop-shadow(0 34px 58px rgba(0,0,0,.42));
+    saturate(.94)
+    contrast(1)
+    brightness(.82)
+    drop-shadow(0 0 24px rgba(78,171,255,.24))
+    drop-shadow(0 34px 58px rgba(0,0,0,.45));
+}
+.c1k-static-object::before,
+.c1k-static-object::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  -webkit-mask-image: var(--asset-mask);
+          mask-image: var(--asset-mask);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
+.c1k-static-object::before {
+  inset: -7%;
+  z-index: 2;
+  background:
+    radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(180,218,255,.22), transparent 18%),
+    linear-gradient(118deg, transparent 18%, rgba(255,255,255,.18) 26%, transparent 38%, transparent 66%, rgba(69,166,255,.12) 76%, transparent 88%);
+  mix-blend-mode: screen;
+  opacity: .38;
+  transform: translate3d(var(--gx, 0px), var(--gy, 0px), 34px);
 }
 .c1k-static-object::after {
-  display: none;
+  inset: -3%;
+  z-index: 3;
+  background: radial-gradient(ellipse at center, transparent 45%, rgba(1,6,14,.24) 72%, rgba(1,6,14,.58) 100%);
+  mix-blend-mode: multiply;
+  opacity: .72;
 }
 
 .waves-glass-image {
@@ -776,30 +825,65 @@ section { position: relative; }
   z-index: 1;
   transform: none;
   filter:
-    saturate(1.03)
-    contrast(1.02);
+    saturate(.82)
+    contrast(.98)
+    brightness(.74)
+    drop-shadow(0 18px 38px rgba(0,0,0,.38));
+  -webkit-mask-image: radial-gradient(ellipse 84% 86% at 50% 50%, black 0%, black 66%, rgba(0,0,0,.78) 82%, transparent 98%);
+          mask-image: radial-gradient(ellipse 84% 86% at 50% 50%, black 0%, black 66%, rgba(0,0,0,.78) 82%, transparent 98%);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
 }
 .waves-glass-object .asset-reflect {
   display: none;
 }
 .waves-glass-image:hover .asset-base {
   filter:
-    saturate(1.05)
-    contrast(1.03)
-    brightness(1.015);
+    saturate(.9)
+    contrast(1)
+    brightness(.8)
+    drop-shadow(0 20px 42px rgba(0,0,0,.42));
 }
 .waves-glass-object::before,
 .waves-glass-object::after {
-  content: none;
-  display: none;
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  -webkit-mask-image: var(--waves-mask);
+          mask-image: var(--waves-mask);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
+.waves-glass-object::before {
+  inset: -2%;
+  z-index: 2;
+  background:
+    radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(206,238,255,.16), transparent 22%),
+    linear-gradient(132deg, rgba(255,255,255,.2) 0%, rgba(255,255,255,.08) 12%, transparent 30%, transparent 60%, rgba(101,213,229,.13) 72%, transparent 88%);
+  mix-blend-mode: screen;
+  opacity: .3;
+  transform: translate3d(var(--gx, 0px), var(--gy, 0px), 30px);
+}
+.waves-glass-object::after {
+  inset: -1%;
+  z-index: 3;
+  background:
+    radial-gradient(ellipse at center, transparent 48%, rgba(2,8,15,.2) 74%, rgba(2,8,15,.56) 100%),
+    linear-gradient(24deg, transparent 18%, rgba(255,255,255,.13) 22%, transparent 31%, transparent 78%, rgba(146,221,255,.1) 84%, transparent 92%);
+  mix-blend-mode: screen;
+  opacity: .4;
 }
 .waves-glass-image:hover .waves-glass-object::before {
-  content: none;
-  display: none;
+  opacity: .4;
 }
 .waves-glass-image:hover .waves-glass-object::after {
-  content: none;
-  display: none;
+  opacity: .48;
 }
 
 /* Static illustration — breathing 3D tilt + specular sweep */
